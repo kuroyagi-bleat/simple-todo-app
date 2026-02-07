@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="シンプルで使いやすいToDoリストアプリ">
+    <title>Simple ToDo App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Simple ToDo</h1>
+            <div class="user-info">
+                <span id="user-name-display" role="button" tabindex="0" aria-label="ユーザー名変更">Guest</span> さん
+            </div>
+        </header>
+
+        <section class="add-task-section">
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="新しいタスクを入力..." required aria-label="タスク入力">
+                <button type="submit" id="add-btn" aria-label="タスク追加">追加</button>
+            </form>
+        </section>
+
+        <section class="task-list-section">
+            <ul id="task-list">
+                <!-- タスクアイテムはここにJavaScriptで追加されます -->
+            </ul>
+            <div id="empty-state" class="hidden">
+                <p>タスクはありません。新しいタスクを追加しましょう！</p>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <button id="export-btn" class="secondary-btn">JSON保存</button>
+            <button id="import-btn" class="secondary-btn">データ読込</button>
+            <input type="file" id="import-file" accept=".json" class="hidden">
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
